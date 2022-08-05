@@ -52,3 +52,17 @@ pop_up_menu_items.forEach(function(pop_up_menu_item){
 capture_image.addEventListener("click",function(e){
     open_camera.click();
 });
+
+open_camera.addEventListener("change",function(e){
+    encodeImageFileAsURL(open_camera);
+});
+
+function encodeImageFileAsURL(element){
+    var file = element.files[0];
+    var reader = new FileReader();
+    reader.onloadend = function(){
+        console.log('RESULT', reader.result);
+        document.querySelector("img").src = reader.result;
+    }
+    reader.readAsDataURL(file);
+}
