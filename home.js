@@ -57,6 +57,11 @@ open_camera.addEventListener("change",function(e){
     encodeImageFileAsURL(open_camera);
 });
 
+remove_image.addEventListener("click",function(e){
+    open_camera.value = "";
+    document.querySelector("img").src = "no_image.jpg";
+});
+
 function encodeImageFileAsURL(element){
     var file = element.files[0];
     var reader = new FileReader();
