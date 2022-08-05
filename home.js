@@ -58,9 +58,11 @@ open_camera.addEventListener("change",function(e){
 });
 
 remove_image.addEventListener("click",function(e){
-    if(confirm("Do you want to remove this image?")){
-        open_camera.value = "";
-        document.querySelector("img").src = "no_image.jpg";
+    if(open_camera.value !== ""){        
+        if(confirm("Do you want to remove this image?")){
+            open_camera.value = "";
+            document.querySelector("img").src = "no_image.jpg";
+        }
     }
 });
 
