@@ -623,6 +623,14 @@ video {
   z-index: 10;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
+.m-20 {
+  margin: 5rem;
+}
+
 .mx-96 {
   margin-left: 24rem;
   margin-right: 24rem;
@@ -688,6 +696,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .flex {
